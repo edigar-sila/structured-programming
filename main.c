@@ -2,21 +2,30 @@
 #include <stdlib.h>
 
 int main() {
-    int r, c;
-    int table[6][4] = {
-        {1,  2,  3,  4},
-        {5,  6,  7,  8},
-        {9,  10, 11, 12},
-        {13, 14, 15, 16},
-        {17, 18, 19, 20},
-        {21, 22, 23, 24}
-    };
+    int n, i;
 
-    for (r = 0; r < 6; r++) {
-        for (c = 0; c < 4; c++) {
-            printf("table[%d][%d] = %d\n", r, c, table[r][c]);
-        }
+    printf("Input the number of elements to store in the array :");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Input %d number of elements in the array :\n", n);
+    for (i = 0; i < n; i++) {
+        printf("element - %d : ", i);
+        scanf("%d", &arr[i]);
     }
+
+    printf("\nThe values store into the array are : ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    /* Start at the last index (n - 1) and move backwards to 0 */
+    printf("\nThe values store into the array in reverse are : ");
+    for (i = n - 1; i >= 0; i--) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 
     return 0;
 }
